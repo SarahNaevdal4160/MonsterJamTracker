@@ -104,7 +104,7 @@ fun MonsterJamScreen(
                     verticalArrangement = Arrangement.spacedBy(8.dp),
                     modifier = Modifier.fillMaxSize()
                 ) {
-                    items(trucks, key = { it.id }) { truck ->
+                    items(trucks.reversed(), key = { it.id }) { truck ->
                         MonsterTruckItem(
                             truck = truck,
                             onToggleCollected = { viewModel.toggleCollected(truck.id) },
